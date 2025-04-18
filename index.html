@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Grace M. Tabañag</title>
-    <link rel="stylesheet" href="Tabañag.css">
     <style>
         body {
-    background: url('https://drive.google.com/uc?export=view&id=1Bh8qv5l88JWNUanpZ2cj5j_r2X1RiDSd') no-repeat center center fixed;
-    background-size: cover;
-    color: #4a235a;
-    margin: 0;
-    padding: 0;
-    background-color: white; /* Added to fix image visibility */
-    transition: background-color 0.3s, color 0.3s;
-}
+            background: url('https://files.catbox.moe/v7el2d.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #4a235a;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
 
         .container {
             width: 85%;
             margin: 20px auto;
-            background: rgba(255, 255, 255, 0.3); 
+            background: rgba(255, 255, 255, 0.3);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            
+            
         }
+
+        .dark-mode .container {
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+
         h2 {
             background-color: #ff9eb5;
             color: #4a235a;
@@ -32,6 +43,12 @@
             text-align: center;
             border-radius: 5px;
         }
+
+        .dark-mode h2 {
+            background-color: #444;
+            color: white;
+        }
+
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -40,6 +57,7 @@
             display: block;
             margin: 10px auto;
         }
+
         .section {
             padding: 15px;
             border: 2px solid #ff9eb5;
@@ -47,14 +65,27 @@
             margin-bottom: 15px;
             text-align: justify;
         }
+
+        .dark-mode .section {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: 2px solid #ff9eb5;
+        }
+
         ul {
             padding-left: 20px;
         }
+
         a {
             color: #4a235a;
             text-decoration: none;
             font-weight: bold;
         }
+
+        .dark-mode a {
+            color: white;
+        }
+
         .footer {
             text-align: center;
             font-size: 15px;
@@ -62,62 +93,74 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        .dark-mode .footer {
+            color: white;
+        }
+           
         .section p:hover,
         .section li:hover,
         h2:hover {
-            color: skyblue;
+            color: skyblue; 
             cursor: pointer;
         }
+
         .music-container {
             display: flex;
             justify-content: center;
             align-items: center;
             margin-top: 20px;
         }
+
         .music-player {
             width: 250px;
-            border: 4px solid #ff9eb5; 
+            border: 4px solid #ff9eb5;
             border-radius: 10px;
             padding: 5px;
-            background: rgba(255, 255, 255, 0.9); 
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        
-        /* Dark Mode Styles */
-        .dark-mode {
-            background-color: #333;
+
+        .toggle-button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #ff9eb5;
+            color: #4a235a;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .toggle-button:hover {
+            background-color: #e68a9d;
+        }
+
+        .dark-mode .toggle-button {
+            background-color: #444;
             color: white;
         }
-        .dark-mode .container {
-            background: rgba(0, 0, 0, 0.7);
+
+        .quotes {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 15px;
+            color: #4a235a;
+            font-style: italic;
         }
-        .dark-mode h2 {
-            background-color: #666;
+
+        .dark-mode .quotes {
+            color: white;
         }
-        .dark-mode .section {
-            border-color: #666;
-        }
-        .dark-mode a {
-            color: #ffffff;
-        }
-        button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: #ff9eb5;
-    border: 4px solid #ff9eb5; /* Matching previous borders */
-    color: #4a235a;
-    font-weight: bold;
-        }
-        
     </style>
 </head>
 <body>
-
     <div class="container">
         <h2>Mary Grace M. Tabañag</h2>
-
-        <img src="https://lh3.googleusercontent.com/d/18y_u4sPypycK8LKHcI1MkMo5eG3tggve=w500" class="profile-pic">
+        <img src="https://files.catbox.moe/ytqbc0.jpeg" class="profile-pic">
+        
+        <div class="quotes" id="quote"></div>
 
         <div class="section">
             <h2>Objective</h2>
@@ -156,12 +199,12 @@
             <p>Curvada Elementary School</p>
             <p>Curvada, Tukuran, Zamboanga del Sur</p>
             <p>2016 – 2017</p>
-
+            
             <h3>Secondary</h3>
             <p>Tukuran Technical Vocational High School</p>
             <p>San Carlos, Tukuran, Zamboanga del Sur</p>
             <p>2022 – 2023</p>
-
+            
             <h3>Tertiary</h3>
             <p>Zamboanga del Sur Provincial Government College</p>
             <p>Undergraduate</p>
@@ -170,15 +213,9 @@
         <div class="section">
             <h2>Skills & Experience</h2>
             <ul>
-                <li>Basic knowledge of computers
-                    <p>(Word, PowerPoint, PDF)</p>
-                </li>
-                <li>Welder at Campus 1, Tukuran, Zamboanga del Sur
-                    <p>(August 2022 – July 2023)</p>
-                </li>
-                <li>Saleswoman at Trece Martires, Cavite
-                    <p>(December 2018 – June 2019)</p>
-                </li>
+                <li>Basic knowledge of computers (Word, PowerPoint, PDF)</li>
+                <li>Welder at Campus 1, Tukuran, Zamboanga del Sur (August 2022 – July 2023)</li>
+                <li>Saleswoman at Trece Martires, (December 2018 – June 2019)</li>
             </ul>
         </div>
 
@@ -186,47 +223,35 @@
             <p>Mary Grace Macalisang Tabañag</p>
         </div>
 
-        <audio autoplay loop controls class="music-player">
-            <source src="https://files.catbox.moe/iycp9n.m4a" type="audio/mp4">
-        </audio>
+        <div class="music-container">
+            <audio autoplay loop controls class="music-player">
+                <source src="https://files.catbox.moe/iycp9n.m4a" type="audio/mp4">
+            </audio>
+        </div>
+
+        <button class="toggle-button" onclick="toggleMode()">Toggle Light/Dark Mode</button>
     </div>
 
-    <!-- JavaScript Section -->
     <script>
-        // Real-time greeting based on the time of the day
-        const greeting = document.createElement("h3");
-        const currentHour = new Date().getHours();
-        let greetingText = '';
+        const quotes = [
+            "Believe in yourself and all that you are.",
+            "Success doesn't just find you. You have to go out and get it.",
+            "The only way to do great work is to love what you do.",
+            "Don’t watch the clock; do what it does. Keep going.",
+            "The future depends on what you do today."
+        ];
 
-        if (currentHour < 12) {
-            greetingText = "Good Morning!";
-        } else if (currentHour < 18) {
-            greetingText = "Good Afternoon!";
-        } else {
-            greetingText = "Good Evening!";
+        function showRandomQuote() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').textContent = randomQuote;
         }
 
-        greeting.innerText = greetingText;
-        document.querySelector(".container").insertBefore(greeting, document.querySelector(".profile-pic").nextSibling);
+        window.setInterval(showRandomQuote, 10000);
+        showRandomQuote();
 
-        // Dark Mode and Light Mode Toggle
-        const toggleMode = () => {
+        function toggleMode() {
             document.body.classList.toggle('dark-mode');
-        };
-
-        const button = document.createElement("button");
-        button.innerText = "Toggle Dark/Light Mode";
-        button.style.padding = "10px 20px";
-        button.style.marginTop = "20px";
-        button.style.cursor = "pointer";
-        button.style.backgroundColor = "#ff9eb5";
-        button.style.border = "none";
-        button.style.color = "#4a235a";
-        button.style.fontWeight = "bold";
-        button.addEventListener("click", toggleMode);
-
-        document.querySelector(".footer").appendChild(button);
+        }
     </script>
-
 </body>
 </html>
